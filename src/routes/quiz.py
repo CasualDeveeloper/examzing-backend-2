@@ -41,8 +41,7 @@ def generate_quiz_questions(content_text, question_count, custom_prompt=""):
             ]
         }}
         """
-        
-       response = client.chat.completions.create(
+        response = client.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
         {"role": "system", "content": "You are an expert quiz generator. Generate high-quality multiple-choice questions based on document content."},
